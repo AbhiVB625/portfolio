@@ -251,3 +251,90 @@ body {
   background: var(--off-white-bg);
   color: var(--primary-color);
 }
+
+/* mobile responsiveness */
+
+@media (max-width: 768px) {
+
+  /* Global Adjustments */
+
+  body {
+    font-size: 20px;
+    text-align: justify;
+  }
+
+  .section-container {
+    padding: 40px 20px !important;
+    font-size: 18px;
+  }
+
+  /* Hero Section */
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero-inner img {
+    width: 7.5%;
+  }
+
+  .illustration {
+    margin-top: 30px;
+    width: 100% !important;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Big Header */
+  .title-intro {
+    font-size: 1.5rem;
+  }
+
+  .title-main {
+    font-size: 4rem;
+    margin-top: -1rem;
+  }
+
+  /* Project Grid */
+  .website-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .website-info h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .website-demo,
+  .even {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tech-tags {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .website-btn-label {
+    text-align: center;
+  }
+
+  .website-btn {
+    margin: 0 auto;
+  }
+
+  .website-gif img {
+    width: 100%;
+  }
+
+  .section-head {
+    font-size: 2.5rem;
+  }
+}
