@@ -1,0 +1,253 @@
+/* style.css */
+
+/* Product Sans Font */
+@font-face {
+  font-family: 'ProductSans';
+  src: url('/assets/font/GoogleSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProductSans';
+  src: url('/assets/font/GoogleSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ProductSans';
+  src: url('/assets/font/GoogleSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProductSans';
+  src: url('/assets/font/GoogleSans-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ProductSans';
+  src: url('/assets/font/GoogleSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProductSans';
+  src: url('/assets/font/GoogleSans-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+:root {
+  --primary-color: #7B61FF;
+  --off-white-bg: #FAFAFA;
+  --secondary-bg: #EDE9FE;
+  --subhead-color: #150080;
+  --default-text: #2B2B2B;
+  --primary-dark-text: #060118;
+  --tag-color: #6B7280;
+  --linkedin: #0077B5;
+  --font-head: 'Poppins', sans-serif;
+  --font-text: 'ProductSans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-text);
+  line-height: 1.6;
+  background-color: var(--off-white-bg);
+  color: var(--default-text);
+}
+
+/* reusables */
+
+.section-container {
+  padding: 80px 250px;
+  min-height: 100vh;
+  font-size: 32px;
+}
+
+.section-head {
+  text-align: center;
+  font-size: 75px;
+  color: var(--primary-color);
+}
+
+/* Huge Intro */
+
+.bighead {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+}
+
+.bighead-textbox {
+  color: white;
+}
+
+.title-intro {
+  font-family: var(--font-head);
+  font-size: 50px;
+  font-weight: 100;
+}
+
+.title-main {
+  margin-top: -75px;
+  font-family: var(--font-head);
+  font-size: 200px;
+  font-weight: bold;
+}
+
+/* Hero Section */
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-section h1 {
+  font-size: 75px;
+}
+
+.name {
+  color: var(--primary-color);
+}
+
+.hero-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-services {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-services h2 {
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.points-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.points {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cta {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+}
+
+.cta button,
+.resume-btn {
+  padding: 15px 30px;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    /* soft low shadow */
+    0 8px 16px rgba(0, 0, 0, 0.08);
+  /* deeper shadow for realism */
+  font-family: var(--font-text);
+  font-size: 32px;
+  font-weight: 500;
+  border: 1px solid var(--primary-color);
+  border-radius: 16px;
+  text-decoration: none;
+  background: var(--primary-color);
+  color: var(--off-white-bg);
+}
+
+.cta button:hover,
+.resume-btn:hover {
+  border: 1px solid var(--off-white-bg);
+  background: var(--off-white-bg);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+#linkedin-btn {
+  padding: 15px !important;
+  background-color: var(--linkedin);
+}
+
+/* websites section */
+
+.websites-section {
+  background-color: var(--secondary-bg);
+}
+
+.website-demo {
+  margin-top: 100px;
+  display: flex;
+  gap: 50px;
+}
+
+.even {
+  flex-direction: row-reverse;
+}
+
+.website-info h2 {
+  font-size: 40px;
+  color: var(--subhead-color);
+}
+
+.tech-tag {
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 20px;
+  background: var(--tag-color);
+  color: var(--off-white-bg);
+}
+
+.description {
+  margin-top: 12px;
+  line-height: 30px;
+  text-align: justify;
+  font-size: 24px;
+  color: var(--primary-dark-text);
+}
+
+.website-btn-label {
+  margin-top: 12px;
+  font-size: 20px;
+  color: var(--tag-color);
+}
+
+.website-btn {
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 8px 16px rgba(0, 0, 0, 0.08);
+  background: var(--primary-color);
+  color: var(--off-white-bg);
+}
+
+.website-btn:hover {
+  border: 1px solid var(--off-white-bg);
+  background: var(--off-white-bg);
+  color: var(--primary-color);
+}
