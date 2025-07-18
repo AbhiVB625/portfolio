@@ -210,7 +210,14 @@
             class="contact-form"
             action="https://formsubmit.co/valiplakkal.abhimanue@gmail.com"
             method="post"
+            enctype="text/plain"
           >
+            <input
+              type="hidden"
+              name="_next"
+              value="https://www.abhimanue-portfolio.vercel.app/thank-you.html"
+            />
+            <input type="hidden" name="_captcha" value="false" />
             <div class="row mobile-row">
               <input type="text" name="name" placeholder="Name" required />
               <input
