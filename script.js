@@ -144,3 +144,19 @@ const showGallery = (type, identifier) => {
 
 // Initialize on load
 document.addEventListener("DOMContentLoaded", initGalleries);
+
+// animations
+const animateOnScroll = () => {
+  const sections = document.querySelectorAll(
+    ".section-container, .website-demo"
+  );
+  sections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.8) {
+      section.classList.add("in-view");
+    }
+  });
+};
+
+window.addEventListener("load", animateOnScroll);
+window.addEventListener("scroll", animateOnScroll);
