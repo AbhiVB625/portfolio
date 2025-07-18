@@ -388,6 +388,14 @@ body {
     font-size: 2.5rem;
   }
 
+  .points img {
+    width: 28px;
+  }
+
+  .points p {
+    font-size: 18px;
+  }
+
   .cta {
     margin-top: 24px;
   }
@@ -446,11 +454,13 @@ body {
 
   .website-btn-label {
     text-align: center;
+    font-size: 18px;
   }
 
   .website-btn {
     margin: 0 auto;
     padding: 10px 60px;
+    font-size: 20px;
   }
 
   .website-gif img {
