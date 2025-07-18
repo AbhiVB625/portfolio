@@ -289,7 +289,7 @@ body {
 
 
 .contact-form input,
-textarea {
+.contact-form textarea {
   padding: 12px;
   font-family: var(--font-text);
   font-size: 24px;
@@ -325,21 +325,18 @@ textarea {
 
 .copyright {
   background: var(--default-text);
+  font-family: var(--font-head) !important;
 }
 
 .copyright p {
   margin: 0;
-  font-size: 24px;
   color: var(--off-white-bg);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 6px;
-}
-
-.copyright span {
-  margin: 0;
-  font-size: 50px;
+  font-size: 24px;
+  line-height: 60px;
 }
 
 /* mobile responsiveness */
@@ -470,6 +467,19 @@ textarea {
     width: 100%;
   }
 
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 18px;
+  }
+
+  .contact-form button {
+    font-size: 18px;
+  }
+
+  .contact-form .row img {
+    width: 40px;
+  }
+
   .mobile-row {
     flex-direction: column;
   }
@@ -478,9 +488,6 @@ textarea {
 
   .copyright p {
     font-size: 16px;
-  }
-
-  .copyright span {
-    font-size: 30px;
+    line-height: 40px;
   }
 }
