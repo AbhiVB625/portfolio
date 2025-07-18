@@ -206,13 +206,27 @@
           alt="illustration"
         />
         <div class="form-container">
-          <form class="contact-form">
+          <form
+            class="contact-form"
+            action="https://formsubmit.co/valiplakkal.abhimanue@gmail.com"
+            method="post"
+          >
             <div class="row mobile-row">
-              <input type="text" placeholder="Name" required />
-              <input type="number" placeholder="Mobile Number" required />
+              <input type="text" name="name" placeholder="Name" required />
+              <input
+                type="number"
+                name="mobile"
+                placeholder="Mobile Number"
+                required
+              />
             </div>
-            <input type="email" placeholder="Email Address" requied />
-            <textarea placeholder="Message" rows="6"></textarea>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              requied
+            />
+            <textarea name="message" placeholder="Message" rows="6"></textarea>
             <div class="row">
               <button type="submit">Send Message</button>
               <div>
