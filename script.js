@@ -125,7 +125,7 @@ const showGallery = (type, identifier) => {
         "brandeddocs/bd4.png",
       ],
       pamphlets: [
-        "pamphlets/rgp1.jpg",
+        "pamphlets/rgp1.png",
         "pamphlets/rgp2.jpg",
         "pamphlets/rgp3.png",
         "pamphlets/rgp4.png",
