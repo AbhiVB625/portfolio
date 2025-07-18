@@ -69,6 +69,15 @@ const showGallery = (type, identifier) => {
         "hipreplacement/hr7.png",
         "hipreplacement/hr8.png",
       ],
+      FinTraqR: [
+        "fintraqr/ft1.png",
+        "fintraqr/ft2.png",
+        "fintraqr/ft3.png",
+        "fintraqr/ft4.png",
+        "fintraqr/ft5.png",
+        "fintraqr/ft6.png",
+        "fintraqr/ft7.png",
+      ],
       "Renascence Global": [
         "renascence/rg1.png",
         "renascence/rg2.png",
