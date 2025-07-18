@@ -827,3 +827,28 @@ body {
 
 
 }
+
+/* Improve scroll performance */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* Disable during reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  body * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
