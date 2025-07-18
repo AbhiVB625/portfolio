@@ -115,6 +115,8 @@ const showGallery = (type, identifier) => {
         "socialmedia/sm14.png",
         "socialmedia/sm15.png",
         "socialmedia/sm16.png",
+        "socialmedia/sm17.png",
+        "socialmedia/sm18.png",
       ],
       brandeddocs: [
         "brandeddocs/bd1.jpg",
@@ -142,28 +144,3 @@ const showGallery = (type, identifier) => {
 
 // Initialize on load
 document.addEventListener("DOMContentLoaded", initGalleries);
-
-// Initialize Lenis
-const lenis = new Lenis({
-  lerp: 0.1, // Smoothness (0.1 = smoother but slower)
-  wheelMultiplier: 1.2, // Scroll speed
-  touchMultiplier: 2, // Touch scroll speed
-});
-
-// Sync with RAF for best performance
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
-
-// Handle anchor links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", (e) => {
-    e.preventDefault();
-    lenis.scrollTo(anchor.getAttribute("href"), {
-      offset: -100, // Adjust for fixed headers
-      duration: 1.5, // Seconds
-    });
-  });
-});
