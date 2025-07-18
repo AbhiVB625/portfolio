@@ -97,6 +97,12 @@ body {
 
 /* Huge Intro */
 
+.cat-top {
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+
 .bighead {
   height: 100vh;
   display: flex;
@@ -123,6 +129,12 @@ body {
 }
 
 /* Hero Section */
+
+.cat-bottom {
+  position: absolute;
+  right: 137px;
+  top: 1070px;
+}
 
 .hero-section {
   display: flex;
@@ -616,6 +628,12 @@ body {
 
   /* Hero Section */
 
+  .cat-bottom {
+    right: 38px;
+    top: 89vh;
+    width: 100px;
+  }
+
   .hero-inner img {
     width: 7.5%;
   }
@@ -651,6 +669,12 @@ body {
   }
 
   /* Big Header */
+
+  .cat-top {
+    bottom: 10vh;
+    right: 20px;
+    width: 120px;
+  }
 
   .bighead {
     height: 90vh;
