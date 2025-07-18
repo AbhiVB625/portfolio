@@ -364,6 +364,10 @@ body {
   color: var(--off-white-bg);
 }
 
+.media:hover {
+  cursor: pointer;
+}
+
 #socialmedia {
   background: url(/assets/img/socialmedia-bg.png);
 }

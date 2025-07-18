@@ -102,7 +102,7 @@ const showGallery = (type, identifier) => {
         "socialmedia/sm10.png",
         "socialmedia/sm11.png",
         "socialmedia/sm12.png",
-        "socialmedia/sm13.png",
+        "socialmedia/sm13.jpg",
         "socialmedia/sm14.png",
         "socialmedia/sm15.png",
         "socialmedia/sm16.png",
@@ -114,9 +114,9 @@ const showGallery = (type, identifier) => {
         "brandeddocs/bd4.png",
       ],
       pamphlets: [
-        "pamphlets/rgp1.png",
+        "pamphlets/rgp1.jpg",
         "pamphlets/rgp2.jpg",
-        "pamphlets/rgp3.jpg",
+        "pamphlets/rgp3.png",
         "pamphlets/rgp4.png",
       ],
     };
