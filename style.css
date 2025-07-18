@@ -76,6 +76,14 @@ body {
   padding: 80px 250px;
   min-height: 100vh;
   font-size: 32px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.section-container.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section-inner {
@@ -103,6 +111,7 @@ body {
   right: 100px;
 }
 
+
 .bighead {
   height: 100vh;
   display: flex;
@@ -113,12 +122,48 @@ body {
 
 .bighead-textbox {
   color: white;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .title-intro {
   font-family: var(--font-head);
   font-size: 50px;
   font-weight: 100;
+  overflow: hidden;
+  border-right: 3px solid var(--primary-color);
+  /* Cursor */
+  white-space: nowrap;
+  animation: typing 3s steps(20, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: var(--primary-color);
+  }
 }
 
 .title-main {
@@ -133,7 +178,7 @@ body {
 .cat-bottom {
   position: absolute;
   right: 137px;
-  top: 99vh;
+  top: -2vh;
 }
 
 .hero-section {
@@ -174,6 +219,14 @@ body {
   gap: 20px;
 }
 
+.points img {
+  transition: transform 0.3s ease;
+}
+
+.points:hover img {
+  transform: scale(1.1);
+}
+
 .cta {
   margin-top: 40px;
   display: flex;
@@ -196,6 +249,7 @@ body {
   text-decoration: none;
   background: var(--primary-color);
   color: var(--off-white-bg);
+  transition: all 0.3s ease, transform 0.2s ease;
 }
 
 .cta button:hover,
@@ -204,6 +258,8 @@ body {
   background: var(--off-white-bg);
   color: var(--primary-color);
   cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(123, 97, 255, 0.3) !important;
 }
 
 #linkedin-btn {
@@ -226,6 +282,26 @@ body {
   margin-top: 100px;
   display: flex;
   gap: 50px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.4s ease-out;
+}
+
+.website-demo:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.website-demo:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.website-demo:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.website-demo.in-view {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .website-gif:hover {
@@ -556,11 +632,13 @@ body {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-container img:hover {
-  transform: scale(1.02);
+  transform: scale(1.025);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 /* Gallery Modal Enhancements */
@@ -630,7 +708,7 @@ body {
 
   .cat-bottom {
     right: 38px;
-    top: 645px;
+    top: -4px;
     width: 100px;
   }
 
@@ -757,6 +835,7 @@ body {
 
   .app-demo {
     flex-direction: row;
+    margin-top: 25px !important;
   }
 
   .app-info {
@@ -765,6 +844,7 @@ body {
     align-items: flex-start;
     background: var(--secondary-bg);
     box-shadow: none;
+    gap: 0;
   }
 
   .app-info>.tech-tags {
@@ -772,8 +852,13 @@ body {
   }
 
   .app-info>.description {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .app-info>.tech-tags>.tech-tag {
+    font-size: 14px !important;
+    border-radius: 4px;
   }
 
   .app-gif {
@@ -827,4 +912,3 @@ body {
 
 
 }
-
