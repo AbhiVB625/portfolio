@@ -671,13 +671,14 @@ body {
   /* Big Header */
 
   .cat-top {
-    bottom: 10vh;
+    bottom: 70px;
     right: 20px;
     width: 120px;
   }
 
   .bighead {
-    height: 90vh;
+    /* height: 90vh; */
+    height: 650px;
   }
 
   .title-intro {
