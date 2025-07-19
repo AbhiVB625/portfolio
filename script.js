@@ -160,3 +160,13 @@ const animateOnScroll = () => {
 
 window.addEventListener("load", animateOnScroll);
 window.addEventListener("scroll", animateOnScroll);
+
+// cat animations
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    // Adjust threshold as needed
+    document.body.classList.add("scrolled");
+  } else {
+    document.body.classList.remove("scrolled");
+  }
+});

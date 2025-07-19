@@ -103,6 +103,12 @@ body {
   width: 600px;
 }
 
+/* cat */
+
+.mobile-cat {
+  display: none;
+}
+
 /* Huge Intro */
 
 .cat-top {
@@ -704,12 +710,32 @@ body {
     margin-bottom: 20px;
   }
 
+  /* cat */
+
+  .mobile-cat {
+    display: block;
+    width: 150px;
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    z-index: 10000;
+    transition: transform 0.5s ease-out;
+    transform: translateY(0);
+  }
+
+  /* Hide cat when scrolling down */
+  body.scrolled .mobile-cat {
+    transform: translateY(100px);
+    /* Adjust based on cat's height */
+  }
+
   /* Hero Section */
 
   .cat-bottom {
     right: 38px;
     top: -4px;
     width: 100px;
+    display: none;
   }
 
   .hero-inner img {
@@ -752,6 +778,7 @@ body {
     bottom: 10vh;
     right: 20px;
     width: 120px;
+    display: none;
   }
 
   .bighead {
