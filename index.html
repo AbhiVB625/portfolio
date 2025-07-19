@@ -255,7 +255,16 @@
               name="_subject"
               value="New message from your portfolio!"
             />
-            <input type="hidden" name="_replyto" value="%email%" />
+            <input type="hidden" name="_replyto" value="" />
+            <script>
+              // Dynamically sets _replyto to the user's email input
+              document
+                .querySelector('input[name="email"]')
+                .addEventListener("input", (e) => {
+                  document.querySelector('input[name="_replyto"]').value =
+                    e.target.value;
+                });
+            </script>
             <!-- Auto-reply to sender -->
             <div class="row mobile-row">
               <input type="text" name="name" placeholder="Name" required />
