@@ -244,16 +244,19 @@
         <div class="form-container">
           <form
             class="contact-form"
-            action="https://formsubmit.co/valiplakkal.abhimanue@gmail.com"
-            method="post"
-            enctype="text/plain"
+            action="https://formspree.io/f/xdkdanaz"
+            method="POST"
           >
+            <!-- Formspree Hidden Fields -->
+            <input type="text" name="_gotcha" style="display: none" />
+            <!-- Anti-spam -->
             <input
               type="hidden"
-              name="_next"
-              value="https://www.abhimanue-portfolio.vercel.app/thank-you.html"
+              name="_subject"
+              value="New message from your portfolio!"
             />
-            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_replyto" value="%email%" />
+            <!-- Auto-reply to sender -->
             <div class="row mobile-row">
               <input type="text" name="name" placeholder="Name" required />
               <input
