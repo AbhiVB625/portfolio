@@ -170,3 +170,70 @@ window.addEventListener("scroll", () => {
     document.body.classList.remove("scrolled");
   }
 });
+
+// cat speaks
+const cat = document.querySelector(".mobile-cat");
+const bubble = document.querySelector(".speech-bubble");
+const bubbleText = document.querySelector(".bubble-text");
+
+const catPhrases = [
+  // first conversation
+  "Meow! 🐱",
+  "I am incharge of this website",
+  "Usually I sleep around this time, but you are here now",
+  "Listen to me, if you have time",
+  "It took nearly 50 hours to make this website",
+  "He only used HTML, CSS & JS to develop this website",
+  "He learned web development skills from EagleEye Digital",
+  "He learned graphic designing skills from Renascence Global",
+  "I think I have taken enough of your time",
+  "Thank you for listening 💜",
+  "I have sneaked his resume below",
+  "Reach out to him, Form in the bottom",
+  "You may scroll down now 😸",
+  // if user still stays
+  "You are still here? Okay, I will tell you more",
+  "He developed 6 websites in EagleEye Digital",
+  "In Renascence Global, he designed social media posts, branded documents, etc.",
+  "He occasionally made softboard designs, Seminar PPTs, booklets & pamphlets as well",
+  "He used Figma to design all his work in Renascence Global",
+  "He is currently working on improving his UI designing skills",
+  "He also worked in BPO sector for short amount of time",
+  "His highest education qualification is B.Tech in CS (2023)",
+  "Scroll down & check rest of the details below 😸",
+  // if user has a lot of time
+  "You seem quite curious! I will share some personal details with you",
+  "He belongs to Kerala, but he shifted to Indore in 2011",
+  "He knows English, Hindi & Malayalam as of now",
+  "Okay, I can only disclose that much to you 😹",
+  "If you want to know more, fill the form at the bottom",
+  "I will go to sleep now, please feel free to stay.",
+  "Meow..💤",
+];
+
+let currentPhraseIndex = 0; // Track current position
+let isBubbleVisible = false; // Track bubble state
+
+cat.addEventListener("click", () => {
+  // If bubble is already visible, ignore new clicks
+  if (isBubbleVisible) return;
+
+  // Show bubble with current phrase
+  bubbleText.textContent = catPhrases[currentPhraseIndex];
+  bubble.classList.add("visible");
+  bubble.classList.remove("hidden");
+  isBubbleVisible = true;
+
+  // Move to next phrase (loop if needed)
+  currentPhraseIndex = (currentPhraseIndex + 1) % catPhrases.length;
+
+  // Hide after 3 seconds
+  setTimeout(() => {
+    bubble.classList.remove("visible");
+    bubble.classList.add("hidden");
+    isBubbleVisible = false;
+  }, 3000);
+});
+
+// Make cat cursor change to pointer (unchanged)
+cat.style.cursor = "pointer";
